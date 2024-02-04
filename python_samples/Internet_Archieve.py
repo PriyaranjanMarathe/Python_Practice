@@ -12,10 +12,7 @@
 # param_save = (('url', 'http://web.archive.org/save/' + url),)
 # url_save = requests.post(param_save,  access_key=oNb43tgLyo6RVz7I, secret_key=rsJCF3eOgJMxSaFD)
 # print(url_save.json())
-
 import requests
-
-
 def save_to_wayback_machine(url):
     wayback_url = f'http://web.archive.org/save/{url}'
     response = requests.get(wayback_url)
@@ -23,7 +20,6 @@ def save_to_wayback_machine(url):
         print(f"URL '{url}' saved to Wayback Machine successfully.")
     else:
         print(f"Failed to save URL '{url}' to Wayback Machine.")
-
 
 links_to_save = [
     "https://www.loksatta.com/lokrang/sattechya-padchayet/ram-khandekar-article-on-yashwantrao-chavan-2-1678290/",
@@ -50,5 +46,3 @@ links_to_save = [
     ]
 for link in links_to_save:
     save_to_wayback_machine(link)
-
-
